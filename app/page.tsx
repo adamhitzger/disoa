@@ -9,7 +9,7 @@ export default function Home() {
       <p className="text-gray-500 text-[17px] leading-8">
         Právě pro vás stavíme nový digitalní prostor, který bude stejně funkční a kreativní jako naše práce pro klienty.<br/>
         Jsme Disoa Marketing - marketingová agentura jež pomáhá značkám růst pomocí strategie, designu a výkonu.<br/>
-        Mezitím nás můžete kontaktovat na emailu: <Link className="text-blue-800 underline underline-offset-2 decoration-1 decoration-wavy" href={"mailto:info@disoa.cz"}>info@disoa.cz</Link> nebo sledovat naší práci na sociálních sítích.<br/>
+        Mezitím nás můžete kontaktovat na emailu: <Link className="text-blue-800 " href={"mailto:info@disoa.cz"}>info@disoa.cz</Link> nebo sledovat naší práci na sociálních sítích.<br/>
         Děkujeme za trpělivost. Brzy jsme zpět silnější než kdy dřív.
       </p>
       <div className="w-fit mx-auto flex gap-5 flex-row justify-between">
