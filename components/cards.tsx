@@ -7,7 +7,7 @@ export default function Cards({items}: {items: StatisticsItems}){
     return(
          <section id="karty" className={`w-full  flex flex-col justify-center p-4 items-center`}>
             <div className="max-w-4xl flex flex-col p-8 rounded-xl space-y-4">
-                <div className="w-full grid gap-5 grid-cols-3">
+                <div className="w-full grid gap-5 grid-cols-1 sm:grid-cols-3">
                     <div  className={cn(`group/bento text-white flex flex-col justify-between  max-h-full rounded-[25px] bg-cp-white p-8 transition duration-200 hover:shadow-xl`)}>
         <div className={`w-full flex flex-col justify-between`}>
             <svg 

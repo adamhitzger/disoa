@@ -7,20 +7,20 @@ import Link from "next/link";
 
 export default function Header({st_header, nd_header, text, button, logo, bg_img, link}: HeaderProps) {
     return(
-       <header className="w-full text-center justify-center  border min-h-[400px] rounded-bl-[100px] rounded-br-[100px] flex flex-col relative">
+       <header className="w-full text-center justify-center  border min-h-[400px] rounded-bl-[40px] md:rounded-bl-[100px] rounded-br-[40px] md:rounded-br-[100px] flex flex-col relative">
             <Image
         src={"/background.png"}
         alt="Disoa marketing - budejeme Vaše sociální sítě aby je viděli ti správní lidé"
         fill
         priority 
-        className={` object-cover object-center -z-10 rounded-bl-[100px] rounded-br-[100px]`}
+        className={` object-cover object-center -z-10 rounded-bl-[40px] md:rounded-bl-[100px] rounded-br-[40px]`}
       />
     {bg_img && <Image
         src={bg_img}
         alt="Disoa marketing - budejeme Vaše sociální sítě aby je viděli ti správní lidé"
         fill
         priority 
-        className={`grayscale-100 object-cover bg-center object-center -z-20 rounded-bl-[100px] rounded-br-[100px]`}
+        className={`grayscale-100 object-cover bg-center object-center -z-20 rounded-bl-[40px] md:rounded-bl-[100px] rounded-br-[40px]`}
       />}
       {(logo && link) && 
       <Link href={link} className="w-40  h-40 m-auto flex flex-col items-center justify-center bg-white rounded-full size-96">
@@ -45,7 +45,7 @@ export default function Header({st_header, nd_header, text, button, logo, bg_img
             </p>
 
         {button &&
-        <Link href="/#kontakt" className=" flex flex-row justify-start">
+        <Link href="/#kontakt" className="px-6 md:px-2 flex flex-row justify-start">
         <Button>začínáme</Button>
         </Link>
         }

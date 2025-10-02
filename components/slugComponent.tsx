@@ -16,7 +16,7 @@ export default function SlugComp({item}: {item:CaseStudy}){
     return(
         <main className="flex flex-col min-h-screen">
         <Header button={false} logo={item.logo} bg_img={item.main} link={item.igLink}/>
-         <section className="w-full flex flex-col py-4">
+         <section className="w-full flex flex-col p-4">
             <div className={"w-full sm:w-4/5 max-w-4xl mx-auto flex flex-col"}>
                <h2 className="text-4xl">{item.name}</h2>
                 <div className="max-w-4xl w-full  mx-auto flex flex-col sm:flex-row gap-5">
@@ -43,7 +43,7 @@ export default function SlugComp({item}: {item:CaseStudy}){
          </section>
                  <section id="karty" className={`w-full  flex flex-col justify-center p-4 items-center`}>
                     <div className="max-w-4xl flex flex-col p-8 rounded-xl space-y-4">
-                        <div className="w-full grid gap-5 grid-cols-3">
+                        <div className="w-full grid gap-5 grid-cols-1 sm:grid-cols-3">
                             <div  className={cn(`group/bento text-white flex flex-col justify-between  max-h-full rounded-[25px] bg-cp-white p-8 transition duration-200 hover:shadow-xl`)}>
                 <div className={`w-full flex flex-col justify-between`}>
                     <svg 

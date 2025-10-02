@@ -20,8 +20,8 @@ export default function StudiesCarousel({items}: {items: CaseStudies}){
         api?.scrollNext()
       }, [api])
     return(
-        <section className="flex flex-col w-full bg-cp-brown p-8">
-            <div className="mx-auto w-full flex flex-row justify-between sm:w-4/5">
+        <section className="flex flex-col items-center w-full bg-cp-brown py-8">
+            <div className="w-full flex flex-row justify-between sm:w-4/5 ">
                 <h2 className="text-background text-5xl">Case studies</h2>
                 <div className="flex items-center flex-row gap-2">
                 <ArrowUpLeft className="size-14 text-cp-orange" onClick={() => scrollPrev()} strokeWidth={1.5}/>
@@ -32,10 +32,10 @@ export default function StudiesCarousel({items}: {items: CaseStudies}){
               <Carousel 
               opts={{
     loop: true,
-  }} plugins={[plugin.current]}  setApi={setApi} className="w-full">
-                  <CarouselContent>
+  }} plugins={[plugin.current]}  setApi={setApi} className="w-full p-2 rounded-2xl flex flex-row ">
+                  <CarouselContent className="flex flex-row  mx-auto ">
                     {items.map((c:CaseStudy,i: number) => (
-                      <Link href={"/"+c.slug} key={i} className="text-background flex flex-col justify-between p-8 rounded-2xl min-h-96 max-w-68 bg-gradient-to-b from-transparent via-transparent to-cp-orange sm:basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5 ">
+                      <Link href={"/"+c.slug} key={i} className="mx-auto text-background flex flex-col justify-between p-8 rounded-2xl min-h-96 max-w-68 bg-gradient-to-b from-transparent via-transparent to-cp-orange sm:basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5 ">
                       
                          <Image
                                 src={c.main}

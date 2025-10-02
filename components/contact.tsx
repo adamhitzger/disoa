@@ -27,7 +27,7 @@ export default function Contact(){
         }
     }, [state.success, state.message]);  
     return(
-        <section id="kontakt"className="w-full min-h-[500px] flex flex-col md:flex-row gap-4 p-8 bg-cover bg-no-repeat" style={{backgroundImage: "url("+"/background.png"+")"}}>
+        <section id="kontakt"className="w-full min-h-[500px] flex flex-col md:flex-row gap-4 p-8 bg-cover bg-center bg-no-repeat" style={{backgroundImage: "url("+"/background.png"+")"}}>
              
             <div className="w-full flex flex-col space-y-4 md:w-1/2">
                 <h1 className="text-6xl uppercase">Zajímá Vás Víc?</h1>
