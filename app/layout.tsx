@@ -1,15 +1,61 @@
 import type { Metadata } from "next";
-import { Sora } from "next/font/google";
+import { Hanken_Grotesk, Roboto_Mono} from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
+import { Toaster } from "react-hot-toast";
 
-const sora = Sora({
-  variable: "--font-sora",
+const gothic = Hanken_Grotesk({
+  variable: "--font-gothic",
   subsets: ["latin"]
 })
 
+const roboto = Roboto_Mono({
+  variable: "--font-roboto",
+  subsets: ["latin"],
+})
+
+
 export const metadata: Metadata = {
-  title: "Disoa",
-  description: "Disoa - Marketingová agentura",
+  title: "Disoa Marketing",
+  description:
+    "Disoa Marketing – profesionální správa sociálních sítí, Meta Ads kampaní a produkce obsahu. Pomůžeme vaší značce růst a oslovit ty správné lidi v pravý čas.",
+  icons: {
+    icon: "/logos/star.png",
+  },
+  applicationName: "Disoa Marketing",
+  generator: "Next.js",
+  authors: [
+    { name: "Jakub Doležal" },
+  ],
+  keywords: [
+    "Disoa Marketing",
+    "sociální sítě",
+    "správa sociálních sítí",
+    "Meta Ads",
+    "Facebook reklama",
+    "Instagram reklama",
+    "online marketing",
+    "digitální marketing",
+    "produkce obsahu",
+    "marketing pro firmy",
+  ],
+  creator: "Jakub Doležal",
+  publisher: "Jakub Doležal",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    title: "Disoa Marketing | Správa sociálních sítí, Meta Ads a produkce",
+    description:
+      "Disoa Marketing – partner pro efektivní online marketing. Zaměřujeme se na správu sociálních sítí, Meta Ads a produkci obsahu, která zaujme a prodává.",
+    url: "https://disoa.cz",
+    siteName: "Disoa Marketing",
+    locale: "cs_CZ",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -20,9 +66,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${sora.variable} antialiased bg-white`}
+        className={`relative ${gothic.variable} ${roboto.variable} antialiased bg-cp-lightwhite`}
       >
+        <Navbar/>
         {children}
+        <Footer/>
+        <Toaster/>
       </body>
     </html>
   );
