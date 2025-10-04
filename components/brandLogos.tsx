@@ -18,13 +18,13 @@ export default function BrandLogos({data}: {data: Array<BrandLogo>}){
       <MarqueeFade side="right" />
       <MarqueeContent className="flex flex-row">
         {data.map((d: BrandLogo, index: number) => (
-          <MarqueeItem className="bg-background rounded-full ml-20 h-32 w-32 flex flex-col justify-center" key={index}>
+          <MarqueeItem className="bg-background rounded-full ml-40 h-18 w-18 flex flex-col justify-center" key={index}>
             <Link href={d.brandLink}>
             <Image
             width={
-                250
+                150
             }
-            height={250}
+            height={150}
               alt={`Placeholder ${index}`}
               className="overflow-hidden rounded-full"
               src={d.brandLogo}

@@ -34,7 +34,7 @@ useEffect(() => {
  
       <nav
         className={cn(
-          "flex max-w-fit  text-foreground fixed top-10 inset-x-0 mx-auto  rounded-full  bg-cp-lightwhite shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] pr-2 pl-8 py-2  items-center justify-center space-x-4",
+          "flex max-w-full mx-10  text-foreground fixed top-10 inset-x-0 flex-row justify-between  rounded-[1.2rem]  bg-cp-lightwhite z-[5000] p-2  items-center  ",
           className
         )}
       >
@@ -44,16 +44,17 @@ useEffect(() => {
               "relative items-center flex space-x-1"
             )}
           >
-           <Image ref={imgRef} src={"/logos/star.svg"} alt="Logo Disoa Marketing" width={44} height={44}/>
-           <span className="text-5xl">DISOA</span>
+           <Image ref={imgRef} src={"/logos/star.svg"} alt="Logo Disoa Marketing" width={34} height={34}/>
+           <Image  src={"/logos/disoa_name.png"} alt="Logo Disoa Marketing" width={110} height={44}/>
           </Link>
+          <div className="font-light flex md:pl-8 flex-row justify-between max-w-sm w-full">
           <Link
             href={"/#sluzby"}
             className={cn(
               "relative items-center flex space-x-1"
             )}
           >
-            <span className="hidden md:block text-lg">Služby</span>
+            <span className="hidden md:block text-xl">Služby</span>
           </Link>
            <Link
             href={"/#vysledky"}
@@ -61,7 +62,7 @@ useEffect(() => {
               "relative items-center flex space-x-1"
             )}
           >
-            <span className="hidden md:block text-lg">Naše výsledky</span>
+            <span className="hidden md:block text-xl">Naše výsledky</span>
           </Link>
            <Link
             href={"/#klienti"}
@@ -69,16 +70,18 @@ useEffect(() => {
               "relative items-center flex space-x-1"
             )}
           >
-            <span className="hidden md:block text-lg">Klienti</span>
+            <span className="hidden md:block text-xl">Klienti</span>
           </Link>
+          </div>
           <Link className={cn(
               "relative items-center hidden md:flex space-x-1"
             )} href={"/#form"}>
-        <Button>ZAČÍT s námi</Button>
+        <Button size={"sm"}>ZAČÍT s námi</Button>
         </Link>
         <Sheet>
-            <SheetTrigger>
-                <Menu className="text-black flex size-8 md:hidden"/>
+            
+            <SheetTrigger className="flex md:hidden">
+                <Menu className="text-black size-8"/>
             </SheetTrigger>
             <SheetContent className="flex flex-col space-y-5 items-center justify-center">
 

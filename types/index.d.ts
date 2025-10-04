@@ -26,6 +26,7 @@ export interface HeaderProps {
     bg_img?: string;
     logo?: string;
     link?: string;
+    isWhite?: boolean
 }
 
 export interface ActionRes<T> {

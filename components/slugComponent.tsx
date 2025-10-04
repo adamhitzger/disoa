@@ -7,18 +7,20 @@ import { Carousel, CarouselContent } from "./ui/carousel"
 import Image from "next/image"
 import Link from "next/link"
 import Autoplay from "embla-carousel-autoplay"
-import React, { useRef } from "react"
+import React, { useRef, useState } from "react"
 import { cn } from "@/lib/utils"
 export default function SlugComp({item}: {item:CaseStudy}){
      const plugin = useRef(Autoplay({
             delay: 3000, 
         }))
+        const [ndImg, setNdImg] = useState<boolean>(false)
+        console.log(ndImg)
     return(
         <main className="flex flex-col min-h-screen">
         <Header button={false} logo={item.logo} bg_img={item.main} link={item.igLink}/>
-         <section className="w-full flex flex-col p-4">
+         <section className="w-full flex flex-col p-20 justify-center bg-white">
             <div className={"w-full sm:w-4/5 max-w-4xl mx-auto flex flex-col"}>
-               <h2 className="text-4xl">{item.name}</h2>
+               <h2 className="text-5xl font-light ">{item.name}</h2>
                 <div className="max-w-4xl w-full  mx-auto flex flex-col sm:flex-row gap-5">
                  
                 <div className="space-y-2 mt-2 w-full sm:w-2/3 flex flex-col justify-start">
@@ -30,7 +32,7 @@ export default function SlugComp({item}: {item:CaseStudy}){
                               ))}
                               
                    </div>
-                   <p className="text-sm max-w-80">
+                   <p className="text-base font-light ">
                         {item.popis}
                     </p>
                 </div>
@@ -41,7 +43,7 @@ export default function SlugComp({item}: {item:CaseStudy}){
                 </div>
             </div>
          </section>
-                 <section id="karty" className={`w-full  flex flex-col justify-center p-4 items-center`}>
+                 <section id="karty" className={`w-full bg-cp-white/30 flex flex-col justify-center p-4 items-center`}>
                     <div className="max-w-4xl flex flex-col p-8 rounded-xl space-y-4">
                         <div className="w-full grid gap-5 grid-cols-1 sm:grid-cols-3">
                             <div  className={cn(`group/bento text-white flex flex-col justify-between  max-h-full rounded-[25px] bg-cp-white p-8 transition duration-200 hover:shadow-xl`)}>
@@ -127,48 +129,77 @@ export default function SlugComp({item}: {item:CaseStudy}){
         <Carousel 
               opts={{
     loop: true,
-  }} plugins={[plugin.current]}   className="w-full">
+  }} plugins={[plugin.current]}   className="w-full bg-cp-white/30 min-h-screen flex flex-col justify-center">
                   <CarouselContent className="gap-5 w-fit mx-auto">
                     {item.reels.map((c:BrandLogo,i: number) => (
                       <Link href={c.brandLink} key={i} className="text-background  flex flex-col justify-between p-8  rounded-2xl sm:basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5 ">
-                      <div className="bg-cp-white p-2 flex flex-row justify-center rounded-3xl">
+                      
                          <Image
                                 src={c.brandLogo}
                                 alt="Disoa marketing - budejeme Vaše sociální sítě aby je viděli ti správní lidé"
-                                width={550}
-                                height={900}
-                                className="object-cover max-w-68 rounded-2xl object-center z-10"
-                              />
-                        </div>    
+                                width={850}
+                                height={1200}
+                                className="object-cover max-w-96 rounded-2xl object-center z-10"
+                              /> 
                        
                       </Link>
                     ))}
                   </CarouselContent>
                 </Carousel>
         <Statistics  heading="Klíčové výsledky" items={item.statistics} pColor="text-background"/>
-        <section id="statistiky" className="w-full  flex flex-col justify-center p-4 items-center">
-            <div className="max-w-4xl flex flex-col bg-background p-8 rounded-xl space-y-4">
-                <h2 className="text-5xl ">Předtím VS potom</h2>
-                <div className="w-full flex flex-col items-center sm:flex-row ">
-                  <Link href={item.igLink} className="w-full sm:w-1/2 relative">
+        <section id="statistiky" className="w-full  bg-cp-white/30 flex flex-col justify-center pt-4 px-4 items-center" style={{backgroundImage: "url("+"/background.png"+")"}}>
+            <div className="max-w-4xl flex flex-col px-8 pt-8 rounded-xl justify-between space-y-4">
+                <h2 className="text-5xl my-10">Předtím VS potom</h2>
+                <div className="w-full mt-10 hidden items-center sm:flex sm:flex-row ">
+                  
+                  <div className="w-full sm:w-1/2 relative">
 
                   <Image
                                 src={item.iphonePred}
                                 alt="Disoa marketing - budejeme Vaše sociální sítě aby je viděli ti správní lidé"
                                 width={350}
                                 height={600}
-                                className="object-cover  rounded-2xl object-top"
+                                className="object-cover max-h-[31.5rem] rounded-2xl object-top"
                               />
-                  </Link>
-                   <Link href={item.igLink} className="w-full sm:w-1/2 ">
+                  </div>
+                   <div className="w-full sm:w-1/2 ">
                                <Image
                                 src={item.iphonePotom}
                                 alt="Disoa marketing - budejeme Vaše sociální sítě aby je viděli ti správní lidé"
                                 width={350}
                                 height={600}
-                                className="object-cover  rounded-2xl object-top"
+                                className="object-cover max-h-[31.5rem] rounded-2xl object-top"
                               />
-                              </Link>
+                              </div>
+                  
+                </div>
+
+                 <div className="w-full mt-10 flex flex-col items-center sm:hidden ">
+                  {ndImg ?
+                   <div className="w-full sm:w-1/2 relative">
+
+                  <Image
+                                src={item.iphonePred}
+                                alt="Disoa marketing - budejeme Vaše sociální sítě aby je viděli ti správní lidé"
+                                width={350}
+                                height={600}
+                                className="object-cover max-h-[25rem] rounded-2xl object-top"
+                                onClick={() => setNdImg(!ndImg)}
+                              />
+                  </div>
+                  :
+                   <div className="w-full sm:w-1/2 ">
+                               <Image
+                                src={item.iphonePotom}
+                                alt="Disoa marketing - budejeme Vaše sociální sítě aby je viděli ti správní lidé"
+                                width={350}
+                                height={600}
+                                className="object-cover max-h-[25rem] rounded-2xl object-top"
+                                onClick={() => setNdImg(!ndImg)}
+                              />
+                              </div>
+                  }
+                 
                 </div>
             </div>
         </section>

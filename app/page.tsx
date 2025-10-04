@@ -18,10 +18,11 @@ export default async function Home() {
     st_header="Nepřicházejte o zákazníky."
     nd_header="Buďte tam, kde jsou oni!"
     text={[ 
-      "Budujeme pro Vás silnou přítomnost na sociálních sítích,",
-      "aby se Vaše značka dostala k těm správným lidem",
-      "ve správný čas."
+      "Budujeme pro Vás silnou přítomnost na ",
+      "sociálních sítích, aby se Vaše značka dostala",
+      " k těm správným lidem ve správný čas."
     ]}
+    isWhite={true}
     button={false}/>
     <BrandLogos data={brandIcons}/>
     <Services/>
