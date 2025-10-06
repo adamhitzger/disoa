@@ -33,11 +33,11 @@ export default function Header({st_header, nd_header, text, button, logo, bg_img
         alt="Disoa marketing - budejeme Vaše sociální sítě aby je viděli ti správní lidé"
         width={600} 
         height={400}
-        className={`  object-cover bg-center  object-center z-20`}
+        className={`  object-cover bg-center rounded-bl-[6em] rounded-br-[6em]  object-center z-20`}
       />
         </Link>}
-           <div className="w-fit flex flex-col space-y-6 m-auto">
-            {st_header && <h1 className={`${nd_header ?"text-5xl sm:text-6xl xl:text-7xl" : "text-6xl sm:text-9xl xl:text-[9rem]"} `}>{st_header}</h1>}
+           <div className="w-fit flex flex-col space-y-6 p-3 m-auto">
+            {st_header && <h1 className={`${nd_header ?"text-5xl sm:text-6xl xl:text-7xl" : "text-6xl sm:text-8xl xl:text-[9rem]"} `}>{st_header}</h1>}
             {nd_header && <h2 className="text-5xl sm:text-6xl xl:text-7xl">{nd_header}</h2>}
             <p className="text-xl font-light">
                {text && text.map((line, i) => (

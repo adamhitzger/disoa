@@ -27,7 +27,7 @@ export default function Contact(){
         }
     }, [state.success, state.message]);  
     return(
-        <section id="kontakt"className=" w-full min-h-screen items-center justify-center flex flex-col p-8 bg-contain bg-center bg-no-repeat" style={{backgroundImage: "url("+"/background.png"+")"}}>
+        <section id="kontakt"className=" w-full min-h-screen items-center justify-center flex flex-col p-8 bg-cover bg-center bg-no-repeat" style={{backgroundImage: "url("+"/background.png"+")"}}>
              <div className="max-w-5xl flex flex-col md:flex-row gap-8 ">
 
         
@@ -80,7 +80,7 @@ export default function Contact(){
                                </p>
                             )}
                 </div>
-                <div className="w-full flex flex-row justify-between">
+                <div className="w-full flex gap-2 items-center flex-row justify-between">
                     <Link href="/zasady-zpracovani-udaju" className=" text-[0.7em]">Odesláním souhlasíte se <span className="underline underline-offset-2 decoration-wavy decoration-cp-brown">zpracováním osobních údajů</span></Link>
                     <Button type="submit" size={"sm"} className="w-32  flex flex-row justify-end"><ArrowDownRight className="size-12" strokeWidth={1}/> </Button>
                 </div>

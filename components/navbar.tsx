@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { Button } from "./ui/button";
@@ -18,6 +18,7 @@ gsap.registerPlugin(ScrollTrigger);
   className?: string;
 }) => {
 const imgRef = useRef<HTMLImageElement>(null);
+const [open, setOpen] = useState<boolean>(false);
 useEffect(() => {
     gsap.to(imgRef.current, {
         rotate: 360,
@@ -78,7 +79,7 @@ useEffect(() => {
             )} href={"/#form"}>
         <Button size={"sm"}>ZAČÍT s námi</Button>
         </Link>
-        <Sheet>
+        <Sheet open={open} onOpenChange={setOpen}>
             
             <SheetTrigger className="flex md:hidden">
                 <Menu className="text-black size-8"/>
@@ -90,6 +91,7 @@ useEffect(() => {
             className={cn(
               "relative items-center flex space-x-1"
             )}
+            onClick={() => setOpen(false)}
           >
             <span className=" text-2xl">Služby</span>
           </Link>
@@ -98,6 +100,7 @@ useEffect(() => {
             className={cn(
               "relative items-center flex space-x-1"
             )}
+            onClick={() => setOpen(false)}
           >
             <span className=" text-2xl">Naše výsledky</span>
           </Link>
@@ -106,13 +109,14 @@ useEffect(() => {
             className={cn(
               "relative items-center flex space-x-1"
             )}
+            onClick={() => setOpen(false)}
           >
             <span className=" text-2xl">Klienti</span>
           </Link>
           <Link className={cn(
               "relative items-center  space-x-1"
             )} href={"/#form"}>
-        <Button>ZAČÍT s námi</Button>
+        <Button onClick={() => setOpen(false)}>ZAČÍT s námi</Button>
         </Link>
             </SheetContent>
         </Sheet>

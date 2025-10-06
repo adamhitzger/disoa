@@ -22,7 +22,7 @@ export default function StudiesCarousel({items}: {items: CaseStudies}){
     return(
         <section className="flex flex-col items-center w-full bg-cp-brown py-20 space-y-10 min-h-screen">
             <div className="w-full flex flex-row justify-between sm:w-4/5 ">
-                <h2 className="text-background font-light text-7xl">Case studies</h2>
+                <h2 className="text-background font-light mx-4 text-6xl sm:text-7xl">Case studies</h2>
                 <div className="flex flex-row w-fit ">
                 <ArrowUpLeft className=" size-22 text-cp-orange" onClick={() => scrollPrev()} strokeWidth={1}/>
                 <ArrowDownRight className="size-22 text-cp-orange" onClick={() => scrollNext()} strokeWidth={1}/>
