@@ -127,7 +127,7 @@ export default function SlugComp({item}: {item:CaseStudy}){
                          </div>
                     </div>
                 </section>
-        {item.reels.length > 0 && <Carousel 
+        {item.reels !== null && item.reels.length > 0 && <Carousel 
               opts={{
     loop: true,
   }} plugins={[plugin.current]}   className="w-full bg-cp-white/30 min-h-screen flex flex-col justify-center">
