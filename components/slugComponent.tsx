@@ -127,7 +127,7 @@ export default function SlugComp({item}: {item:CaseStudy}){
                          </div>
                     </div>
                 </section>
-        <Carousel 
+        {item.reels.length > 0 && <Carousel 
               opts={{
     loop: true,
   }} plugins={[plugin.current]}   className="w-full bg-cp-white/30 min-h-screen flex flex-col justify-center">
@@ -146,7 +146,7 @@ export default function SlugComp({item}: {item:CaseStudy}){
                       </Link>
                     ))}
                   </CarouselContent>
-                </Carousel>
+                </Carousel>}
         <Statistics  heading="Klíčové výsledky" items={item.statistics} pColor="text-background"/>
         <section id="statistiky" className="w-full  bg-cp-white/30 flex flex-col justify-center pt-4 px-4 items-center" style={{backgroundImage: "url("+"/background.png"+")"}}>
             <div className="max-w-4xl flex flex-col px-8 pt-8 rounded-xl justify-between">
