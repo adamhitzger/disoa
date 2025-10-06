@@ -66,7 +66,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`relative ${gothic.variable} ${roboto.variable} antialiased bg-cp-lightwhite`}
+        className={`overflow-x-hidden ${gothic.variable} ${roboto.variable} antialiased bg-cp-lightwhite`}
       >
         <Navbar/>
         {children}

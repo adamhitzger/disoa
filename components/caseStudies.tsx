@@ -33,8 +33,8 @@ export default function StudiesCarousel({items}: {items: CaseStudies}){
               opts={{
     loop: true,
     align: "start",
-  }} plugins={[plugin.current]}  setApi={setApi} className="w-full  rounded-2xl  flex flex-row ">
-                  <CarouselContent className="flex flex-row  mx-auto  gap-5">
+  }} plugins={[plugin.current]}  setApi={setApi} className="max-w-5xl  rounded-2xl  flex flex-row ">
+                  <CarouselContent className="flex flex-row  mx-auto gap-8">
                     {items.map((c:CaseStudy,i: number) => (
                       <Link href={"/"+c.slug} key={i} className="relative mx-auto text-background flex flex-col justify-end pl-10 pb-5 pr-20  rounded-[3em] h-[32rem] min-w-96 sm:basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5 ">
                          <Image
