@@ -32,7 +32,7 @@ function Counter({text, to, endText, anotherText, className, textColor, pColor}:
         </div>
         {anotherText && <><span className="md:hidden text-center text-7xl px-2 font-gothic font-light [word-spacing:0.2px] text-nowrap">{`${anotherText}`}</span></>}
         </div>
-        <p className={`font-gothic text-center text-lg ${pColor}`}>
+        <p className={`font-gothic mt-5 text-center leading-6 font-light text-lg ${pColor}`}>
           {text}
         </p>
       </div>
@@ -60,8 +60,8 @@ export default function StatisticsMain(){
 export function Statistics({heading, items, pColor}: {heading?: string, items: StatisticsItems,  pColor?: "text-background" | "text-foreground"}){
     return(
          <section id="statistiky" className={`w-full  flex flex-col justify-center p- py-16 items-center ${heading && "bg-cp-brown"}`}>
-            <div className={`max-w-4xl flex flex-col  p-8 rounded-[4em] ${!heading &&"bg-background"} space-y-4`}>
-               {heading &&  <h2 className="text-5xl sm:mx-10 text-background ">{heading}</h2>}
+            <div className={`max-w-4xl flex flex-col  p-14 rounded-[4em] ${!heading &&"bg-background"} space-y-4`}>
+               {heading &&  <h2 className="text-5xl font-light sm:mx-10 text-background ">{heading}</h2>}
                 <div className="w-full grid grid-col-1 sm:grid-cols-3">
                     {items.map((s: StatisticsItem, i: number) => (
 <Counter key={i} text={s.text} to={s.to} endText={s.endText}  textColor="text-cp-orange" pColor={pColor}/>

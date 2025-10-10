@@ -22,7 +22,7 @@ export default async function Home() {
       "sociálních sítích, aby se Vaše značka dostala",
       " k těm správným lidem ve správný čas."
     ]}
-    isWhite={true}
+    isWhite={false}
     button={false}/>
     <BrandLogos data={brandIcons}/>
     <Services/>

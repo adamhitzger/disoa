@@ -58,7 +58,7 @@ useEffect(() => {
             <span className="hidden md:block text-xl">Služby</span>
           </Link>
            <Link
-            href={"/#vysledky"}
+            href={"/#statistiky"}
             className={cn(
               "relative items-center flex space-x-1"
             )}
@@ -96,7 +96,7 @@ useEffect(() => {
             <span className=" text-2xl">Služby</span>
           </Link>
            <Link
-            href={"/#vysledky"}
+            href={"/#statistiky"}
             className={cn(
               "relative items-center flex space-x-1"
             )}

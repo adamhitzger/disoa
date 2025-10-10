@@ -28,17 +28,17 @@ export default function Contact(){
     }, [state.success, state.message]);  
     return(
         <section id="kontakt"className=" w-full min-h-screen items-center justify-center flex flex-col p-8 bg-cover bg-center bg-no-repeat" style={{backgroundImage: "url("+"/background.png"+")"}}>
-             <div className="max-w-5xl flex flex-col md:flex-row gap-8 ">
+             <div className="max-w-7xl flex flex-col md:flex-row gap-8">
 
         
-            <div className="max-w-2xl flex flex-col space-y-4 md:w-1/2">
-                <h1 className="text-6xl uppercase font-light">Začněte dnes!</h1>
+            <div className=" flex flex-col space-y-4 w-full md:w-1/2">
+                <h1 className="text-6xl uppercase font-light ">Začněte dnes!</h1>
                 <p className="text-xl max-w-[27rem] font-light">
                   Chcete své podnikání rozjet a posunout na další úroveň? Napište nám pár řádků a společně promyšlenou strategii pro sociální sítě - od tvorby přes reklamy až po kařdodenní správu. Postaráme se o to, aby Vaše značka byla vidět a přitahovala nové zákazníky.  
                 </p>
             </div>
 
-            <form action={action}  className="w-full flex flex-col space-y-4 md:w-1/2">
+            <form action={action} id="form" className="w-full flex flex-col space-y-4 md:w-1/2">
                 <div className='flex flex-col w-full space-y-2'>
                     <Input name="name" type="text" placeholder={"* Jméno a přijmení"} required disabled={isPending} />
                     {state?.errors?.name && (
@@ -80,8 +80,8 @@ export default function Contact(){
                                </p>
                             )}
                 </div>
-                <div className="w-full flex gap-2 items-center flex-row justify-between">
-                    <Link href="/zasady-zpracovani-udaju" className=" text-[0.7em]">Odesláním souhlasíte se <span className="underline underline-offset-2 decoration-wavy decoration-cp-brown">zpracováním osobních údajů</span></Link>
+                <div className="w-full flex gap-2 items-start flex-row justify-between">
+                    <Link href="/zasady-zpracovani-udaju" className=" text-[0.7em]">Odesláním souhlasíte se <br/><span className="">zpracováním osobních údajů</span>.</Link>
                     <Button type="submit" size={"sm"} className="w-32  flex flex-row justify-end"><ArrowDownRight className="size-12" strokeWidth={1}/> </Button>
                 </div>
             </form>

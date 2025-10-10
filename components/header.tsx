@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function Header({st_header, nd_header, text, button, logo, bg_img, link, isWhite}: HeaderProps) {
     return(
        <header className="w-full text-center justify-center  min-h-screen flex flex-col relative">
-{isWhite && <div className="w-full min-h-screen absolute bg-white -z-50"/>}
+{isWhite ? <div className=" rounded-bl-[6em] rounded-br-[6em] w-full min-h-screen absolute bg-white -z-50"/> : <div className=" rounded-bl-[6em] rounded-br-[6em] w-full min-h-screen absolute bg-white -z-50"/>}
 
             <Image
         src={"/background.png"}
@@ -26,7 +26,7 @@ export default function Header({st_header, nd_header, text, button, logo, bg_img
         className={`grayscale-100 object-cover bg-center object-center -z-20 rounded-bl-[6em] rounded-br-[6em]`}
       />}
       {(logo && link) && 
-      <Link href={link} className="w-56  h-56 mx-auto my-80 flex flex-col  items-center justify-center bg-white rounded-full">
+      <Link href={link} className="w-56  h-56 mx-auto my-70 flex flex-col  items-center justify-center bg-white rounded-full">
         <Image
         src={logo}
         quality={100}
