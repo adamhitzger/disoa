@@ -47,7 +47,7 @@ export default function SlugComp({item}: {item:CaseStudy}){
                  <section id="karty" className={`w-full bg-cp-white/30 flex flex-col justify-center items-center`}>
                     <div className="max-w-5xl flex flex-col py-12 rounded-xl">
                         <div className="w-full grid gap-5  grid-cols-1 sm:grid-cols-3">
-                            <div  className={cn(` group/bento  text-white flex flex-col space-y-2 min-w-50 max-h-full rounded-[25px] bg-cp-white px-16 py-10 transition duration-200 hover:shadow-xl`)}>
+                            <div  className={cn(`hover:scale-105 group/bento  text-white flex flex-col space-y-2 min-w-50 max-h-full rounded-[25px] bg-cp-white px-16 py-10 transition duration-200 hover:shadow-xl`)}>
                 <div className={`w-full flex flex-col justify-between space-y-3`}>
                     <svg 
           xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +73,7 @@ export default function SlugComp({item}: {item:CaseStudy}){
                 </p>
               </div>
         
-               <div  className={cn(`min-w-50 group/bento text-white flex flex-col justify-between  max-h-full rounded-[25px] bg-cp-brown px-16 py-10  transition duration-200 hover:shadow-xl`)}>
+               <div  className={cn(`hover:scale-105 min-w-50 group/bento text-white flex flex-col justify-between  max-h-full rounded-[25px] bg-cp-brown px-16 py-10  transition duration-200 hover:shadow-xl`)}>
                 <div className={`w-full flex flex-col justify-between space-y-3`}>
                     <svg 
           xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +99,7 @@ export default function SlugComp({item}: {item:CaseStudy}){
                 </p>
               </div>
         
-               <div  className={cn(`min-w-50 group/bento text-white flex flex-col justify-between px-16 py-10   max-h-full rounded-[25px] bg-cp-orange transition duration-200 hover:shadow-xl`)}>
+               <div  className={cn(`hover:scale-105 min-w-50 group/bento text-white flex flex-col justify-between px-16 py-10   max-h-full rounded-[25px] bg-cp-orange transition duration-200 hover:shadow-xl`)}>
                 <div className={`w-full flex flex-col space-y-4`}>
                     <svg 
           xmlns="http://www.w3.org/2000/svg"

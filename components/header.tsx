@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { HeaderProps } from "@/types";
-import React from "react";
+import React, { useRef } from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import gsap from "gsap";
@@ -9,9 +9,20 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger)
 
 export default function Header({st_header, nd_header, text, button, logo, bg_img, link, isWhite}: HeaderProps) {
-  
+  const div = useRef<HTMLDivElement>(null!)
   React.useEffect(() =>{
-    console.log("Mounted")
+    if(!div.current) return;
+
+    gsap.fromTo(div.current.children, {
+      opacity: 0,
+      y: -500,
+    }, {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      ease: "power2.out",
+      stagger: 0.3
+    })
   },[])
   
   return(
@@ -44,7 +55,7 @@ export default function Header({st_header, nd_header, text, button, logo, bg_img
         className={`  object-cover bg-center rounded-bl-[6em] rounded-br-[6em]  object-center z-20`}
       />
         </Link>}
-           <div className="w-fit flex flex-col space-y-6 p-3 m-auto">
+           <div ref={div} className="w-fit flex flex-col space-y-6 p-3 m-auto">
             {st_header && <h1 className={`${nd_header ?"text-5xl sm:text-6xl xl:text-7xl" : "text-6xl sm:text-8xl xl:text-[9rem]"} `}>{st_header}</h1>}
             {nd_header && <h2 className="text-5xl sm:text-6xl xl:text-7xl">{nd_header}</h2>}
             <p className="text-xl font-light">

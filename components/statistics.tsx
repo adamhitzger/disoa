@@ -23,7 +23,7 @@ function Counter({text, to, endText, anotherText, className, textColor, pColor}:
       }
     }, [divInView, count, to])
     return(  
-    <div ref={ref} className={cn(`group/bento  flex flex-col  text-white max-h-full rounded-[2em]  p-8`, className)}>
+    <div ref={ref} className={cn(`group/bento hover:scale-105 duration-200 transition-all flex flex-col  text-white max-h-full rounded-[2em]  p-8`, className)}>
         <div  className={`${textColor} flex flex-col  justify-center`}>
         <div className={`${textColor} flex flex-row  justify-center`}>
         <motion.span className="text-7xl font-light">{rounded}</motion.span><span className="text-7xl px-2 font-gothic font-light [word-spacing:0.2px] md:text-nowrap">{`${endText}`}</span>
@@ -44,7 +44,7 @@ export default function StatisticsMain(){
        <section id="statistiky" className="w-full min-h-screen flex flex-col justify-center p-4 items-center">
             <div className="max-w-4xl flex flex-col p-8 rounded-xl space-y-12">
                 <h2 className="text-5xl font-light">Proč důvěřovat nám?</h2>
-                <div className="mx-auto grid max-w-4xl grid-cols-1 gap-14 sm:grid-cols-3">
+                <div className="mx-auto grid max-w-4xl grid-cols-1 gap-2 sm:gap-6 md:gap-8 sm:grid-cols-3">
                  <Counter text="měsíční dosahy na profilech klientů" to={4} endText="M" className="bg-cp-white" textColor="text-background"/>
                 <Counter text="zkušeností se sociálními sítěmi" to={5} endText="let" className="bg-cp-brown"  textColor="text-background"/>
                 <Counter text="úspěšně realizovaných projektů" to={25} endText="+" className="bg-cp-orange"  textColor="text-background"/>

@@ -49,14 +49,14 @@ export default function StudiesCarousel({items}: {items: CaseStudies}){
                                 alt="Disoa marketing - budejeme Vaše sociální sítě aby je viděli ti správní lidé"
                                 fill
                                 priority 
-                                className=" max-w-96  rounded-[3em] object-cover -z-10"
+                                className=" max-w-96  rounded-[3em] object-cover -z-20"
                               />
                          <Image
                                 src={c.main}
                                 alt="Disoa marketing - budejeme Vaše sociální sítě aby je viděli ti správní lidé"
                                 fill
                                 priority 
-                                className="object-cover max-w-96  grayscale-90 rounded-[3em] object-center -z-30"
+                                className="sobject-cover max-w-96  grayscale-90 rounded-[3em] object-center -z-30"
                               />
                              
                         <div className="w-full  flex flex-col my-6 space-y-2">

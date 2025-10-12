@@ -8,7 +8,7 @@ export default function Cards({items}: {items: StatisticsItems}){
          <section id="karty" className={`w-full  flex flex-col justify-center p-4 items-center`}>
             <div className="max-w-4xl flex flex-col py-16 rounded-xl space-y-4">
                 <div className="w-full grid gap-5 grid-cols-1 sm:grid-cols-3">
-                    <div  className={cn(`group/bento text-white flex flex-col justify-between  max-h-full rounded-[2em] bg-cp-white p-8 transition duration-200 hover:shadow-xl`)}>
+                    <div  className={cn(`group/bento text-white flex flex-col justify-between  max-h-full rounded-[2em] bg-cp-white p-8 hover:scale-105 transition-all duration-200 hover:shadow-xl`)}>
         <div className={`w-full flex flex-col space-y-3  justify-between`}>
             <svg 
   xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@ export default function Cards({items}: {items: StatisticsItems}){
         </p>
       </div>
 
-       <div  className={cn(`group/bento text-white flex flex-col justify-between  max-h-full rounded-[2em] bg-cp-brown p-8 transition duration-200 hover:shadow-xl`)}>
+       <div  className={cn(`group/bento text-white flex flex-col justify-between  max-h-full rounded-[2em] bg-cp-brown p-8 hover:scale-105 transition-all duration-200 hover:shadow-xl`)}>
         <div className={`w-full flex space-y-3  flex-col justify-between`}>
             <svg 
   xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +50,7 @@ export default function Cards({items}: {items: StatisticsItems}){
         </p>
       </div>
 
-       <div  className={cn(`group/bento text-white  flex flex-col justify-between  max-h-full rounded-[2em] bg-cp-orange p-8 transition duration-200 hover:shadow-xl`)}>
+       <div  className={cn(`group/bento text-white hover:scale-105 flex flex-col justify-between  max-h-full rounded-[2em] bg-cp-orange p-8 transition duration-200 hover:shadow-xl`)}>
         <div className={`w-full flex flex-col space-y-3 justify-between`}>
             <svg 
   xmlns="http://www.w3.org/2000/svg"
