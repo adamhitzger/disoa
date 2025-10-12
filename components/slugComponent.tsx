@@ -17,7 +17,7 @@ export default function SlugComp({item}: {item:CaseStudy}){
         const [ndImg, setNdImg] = useState<boolean>(false)
         console.log(ndImg)
     return(
-        <main className="flex flex-col min-h-screen">
+        <main className="flex flex-col overflow-x-hidden min-h-screen">
         <Header button={false} logo={item.logo} bg_img={item.main} link={item.igLink} isWhite={true}/>
          <section className="w-full flex flex-col p-20 justify-center bg-white">
             <div className={"w-full sm:w-4/5 max-w-4xl mx-auto flex flex-col"}>
@@ -33,7 +33,7 @@ export default function SlugComp({item}: {item:CaseStudy}){
                               ))}
                               
                    </div>
-                   <p className="text-base w-[450] font-light ">
+                   <p className="text-base max-w-[450px] font-light ">
                         {item.popis}
                     </p>
                 </div>
@@ -73,7 +73,7 @@ export default function SlugComp({item}: {item:CaseStudy}){
                 </p>
               </div>
         
-               <div  className={cn(` group/bento text-white flex flex-col justify-between  max-h-full rounded-[25px] bg-cp-brown px-16 py-10  transition duration-200 hover:shadow-xl`)}>
+               <div  className={cn(`min-w-50 group/bento text-white flex flex-col justify-between  max-h-full rounded-[25px] bg-cp-brown px-16 py-10  transition duration-200 hover:shadow-xl`)}>
                 <div className={`w-full flex flex-col justify-between space-y-3`}>
                     <svg 
           xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +99,7 @@ export default function SlugComp({item}: {item:CaseStudy}){
                 </p>
               </div>
         
-               <div  className={cn(` group/bento text-white flex flex-col justify-between px-16 py-10   max-h-full rounded-[25px] bg-cp-orange p-8 transition duration-200 hover:shadow-xl`)}>
+               <div  className={cn(`min-w-50 group/bento text-white flex flex-col justify-between px-16 py-10   max-h-full rounded-[25px] bg-cp-orange transition duration-200 hover:shadow-xl`)}>
                 <div className={`w-full flex flex-col space-y-4`}>
                     <svg 
           xmlns="http://www.w3.org/2000/svg"
@@ -130,7 +130,7 @@ export default function SlugComp({item}: {item:CaseStudy}){
         {item.reels !== null && item.reels.length > 0 && <Carousel 
               opts={{
     loop: true,
-  }} plugins={[plugin.current]}   className="w-full bg-cp-white/30 min-h-screen flex flex-col justify-center">
+  }} plugins={[plugin.current]}   className="w-full bg-cp-white/30 min-h-screen flex row justify-center">
                   <CarouselContent className="gap-5 w-fit mx-auto">
                     {item.reels.map((c:BrandLogo,i: number) => (
                       <Link href={c.brandLink} key={i} className="text-background  flex flex-col justify-between p-8  rounded-2xl sm:basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5 ">

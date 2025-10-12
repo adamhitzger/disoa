@@ -20,7 +20,7 @@ export default function StudiesCarousel({items}: {items: CaseStudies}){
         api?.scrollNext()
       }, [api])
     return(
-        <section id="klienti"  className="flex flex-col items-center w-full bg-cp-brown py-20 space-y-10 min-h-screen">
+        <section id="klienti"  className="overflow-x-hidden flex flex-col items-center w-full bg-cp-brown py-20 space-y-10 min-h-screen">
             <div className="w-full flex flex-row items-center justify-between sm:w-4/5 ">
                 <h2 className="text-background font-light mx-4 text-6xl sm:text-7xl">Case studies</h2>
                 <div className="flex flex-row w-fit ">
@@ -36,7 +36,7 @@ export default function StudiesCarousel({items}: {items: CaseStudies}){
   }} plugins={[plugin.current]}  setApi={setApi} className="max-w-7xl  rounded-2xl  flex flex-row ">
                   <CarouselContent className="">
                     {items.map((c:CaseStudy,i: number) => (
-                      <Link href={"/"+c.slug} key={i} className={`${i === 0 && "ml-5"}  relative mx-auto text-background flex flex-col justify-end pl-10 pb-5 pr-20  rounded-[3em] h-[32rem] min-w-96 sm:basis-1/2 md:basis-1/4 xl:basis-1/4 2xl:basis-1/5 `}>
+                      <Link href={"/"+c.slug} key={i} className={`${i === 0 && "ml-6"}  relative mx-auto text-background flex flex-col justify-end pl-10 pb-5 pr-20  rounded-[3em] h-[32rem] min-w-80 sm:min-w-96 sm:basis-1/2 md:basis-1/4 xl:basis-1/4 2xl:basis-1/5 `}>
                          <Image
                                 src={"/background.png"}
                                 alt="Disoa marketing - budejeme Vaše sociální sítě aby je viděli ti správní lidé"
