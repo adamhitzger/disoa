@@ -75,7 +75,7 @@ export default function SlugComp({item}: {item:CaseStudy}){
               </div>
         
                <div  className={cn(`hover:scale-105  group/bento text-white flex flex-col justify-between  max-h-full rounded-[45px] bg-cp-brown px-16 py-10  transition duration-200 hover:shadow-xl`)}>
-                <div className={`w-full flex flex-col justify-between space-y-3`}>
+                <div className={`w-full flex flex-col justify-between `}>
                     <svg 
           xmlns="http://www.w3.org/2000/svg"
           width="48" height="48"
@@ -90,7 +90,7 @@ export default function SlugComp({item}: {item:CaseStudy}){
         </svg>
         <span className="text-[2.4rem]  font-gothic font-light [word-spacing:0.2px] md:text-nowrap">Nástroje</span>
                 </div>
-                <p className={`font-gothic text-xl leading-5.5 font-extralight `}>
+                <p className={`font-gothic ${item.tools.length === 2 && "mb-5"} text-xl leading-5.5 font-extralight `}>
                   {item.tools && item.tools.map((line, i) => (
                           <React.Fragment key={i}>
                             {line}
@@ -101,7 +101,7 @@ export default function SlugComp({item}: {item:CaseStudy}){
               </div>
         
                <div  className={cn(`hover:scale-105  group/bento text-white flex flex-col justify-between px-16 py-10   rounded-[45px] bg-cp-orange transition duration-200 hover:shadow-xl`)}>
-                <div className={`w-full flex flex-col space-y-4`}>
+                <div className={`w-full flex flex-col`}>
                     <svg 
           xmlns="http://www.w3.org/2000/svg"
           width="48" height="48"

@@ -27,7 +27,7 @@ export default function Footer(){
           </div>
             </div>
              <div className="w-full text-base text-background sm:w-1/2 flex flex-col justify-center sm:items-end font-light" >
-                <h2 className="text-2xl mb-5">Firemní údaje</h2>
+                <h2 className="text-2xl mb-5 normal-case">Firemní údaje</h2>
                 <Link href={"tel:+420775529613"}>775 529 613</Link>
                 <Link href={"mailto:info@disoa.cz"}>info@disoa.cz</Link>
                 <span className="mt-5">IČO: 21349533</span>

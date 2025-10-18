@@ -29,7 +29,7 @@ export default function Contact(){
     return(
         <>
         <section id="kontakt" className="h-20"/>
-        <section className=" w-full min-h-screen items-center justify-center flex flex-col border border-black p-8 bg-cover bg-center bg-no-repeat" style={{backgroundImage: "url("+"/background.png"+")"}}>
+        <section className=" w-full min-h-screen items-center justify-center flex flex-col p-8 bg-cover bg-center bg-no-repeat" style={{backgroundImage: "url("+"/background.png"+")"}}>
              <div className="max-w-7xl flex flex-col md:flex-row gap-8">
 
         
