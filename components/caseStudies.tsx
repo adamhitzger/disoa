@@ -56,11 +56,11 @@ export default function StudiesCarousel({items}: {items: CaseStudies}){
                                 alt="Disoa marketing - budejeme Vaše sociální sítě aby je viděli ti správní lidé"
                                 fill
                                 priority 
-                                className="sobject-cover max-w-96  grayscale-90 rounded-[3em] object-center -z-30"
+                                className="object-cover max-w-96  grayscale-90 rounded-[3em] object-center -z-30"
                               />
                              
                         <div className="w-full  flex flex-col my-6 space-y-2">
-                            <h3 className="font-light  text-4xl text-wrap">{c.name}</h3>
+                            <h3 className="font-light normal-case text-4xl text-wrap">{c.name}</h3>
                             <p className="font-light text-base">
                               {c.popis.slice(0,110)+"..."}
                             </p>

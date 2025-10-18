@@ -21,7 +21,7 @@ export default function SlugComp({item}: {item:CaseStudy}){
         <Header button={false} logo={item.logo} bg_img={item.main} link={item.igLink} isWhite={true}/>
          <section className="w-full flex flex-col p-20 justify-center bg-white">
             <div className={"w-full sm:w-4/5 max-w-4xl mx-auto flex flex-col"}>
-               <h2 className="text-4xl sm:text-5xl font-light ">{item.name}</h2>
+               <h2 className="text-4xl normal-case sm:text-5xl font-light ">{item.name}</h2>
                 <div className="max-w-4xl w-full  mx-auto flex flex-col sm:flex-row gap-5">
                  
                 <div className="space-y-2 mt-2 w-full sm:w-2/3 flex flex-col justify-start">
@@ -47,8 +47,9 @@ export default function SlugComp({item}: {item:CaseStudy}){
                  <section id="karty" className={`w-full bg-cp-white/30 flex flex-col justify-center items-center`}>
                     <div className="max-w-5xl flex flex-col py-12 rounded-xl">
                         <div className="w-full grid gap-5  grid-cols-1 sm:grid-cols-3">
-                            <div  className={cn(`hover:scale-105 group/bento  text-white flex flex-col space-y-2 min-w-50 max-h-full rounded-[25px] bg-cp-white px-16 py-10 transition duration-200 hover:shadow-xl`)}>
-                <div className={`w-full flex flex-col justify-between space-y-3`}>
+                            <div  className={cn(`hover:scale-105 group/bento  text-white flex flex-col space-y-2  max-h-full rounded-[45px] bg-cp-white px-16 py-10  transition duration-200 hover:shadow-xl`)}>
+                <div className={`w-full flex flex-col justify-between
+                  `}>
                     <svg 
           xmlns="http://www.w3.org/2000/svg"
           width="48" height="48"
@@ -73,7 +74,7 @@ export default function SlugComp({item}: {item:CaseStudy}){
                 </p>
               </div>
         
-               <div  className={cn(`hover:scale-105 min-w-50 group/bento text-white flex flex-col justify-between  max-h-full rounded-[25px] bg-cp-brown px-16 py-10  transition duration-200 hover:shadow-xl`)}>
+               <div  className={cn(`hover:scale-105  group/bento text-white flex flex-col justify-between  max-h-full rounded-[45px] bg-cp-brown px-16 py-10  transition duration-200 hover:shadow-xl`)}>
                 <div className={`w-full flex flex-col justify-between space-y-3`}>
                     <svg 
           xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +100,7 @@ export default function SlugComp({item}: {item:CaseStudy}){
                 </p>
               </div>
         
-               <div  className={cn(`hover:scale-105 min-w-50 group/bento text-white flex flex-col justify-between px-16 py-10   max-h-full rounded-[25px] bg-cp-orange transition duration-200 hover:shadow-xl`)}>
+               <div  className={cn(`hover:scale-105  group/bento text-white flex flex-col justify-between px-16 py-10   rounded-[45px] bg-cp-orange transition duration-200 hover:shadow-xl`)}>
                 <div className={`w-full flex flex-col space-y-4`}>
                     <svg 
           xmlns="http://www.w3.org/2000/svg"
@@ -159,8 +160,8 @@ export default function SlugComp({item}: {item:CaseStudy}){
                                 src={item.iphonePred}
                                 alt="Disoa marketing - budejeme Vaše sociální sítě aby je viděli ti správní lidé"
                                 width={350}
-                                height={600}
-                                className="object-cover max-h-[31.5rem] rounded-2xl object-top"
+                                height={700}
+                                className="object-cover max-h-[33rem] rounded-2xl object-top"
                               />
                   </div>
                    <div className="w-full sm:w-1/2 ">
@@ -168,8 +169,8 @@ export default function SlugComp({item}: {item:CaseStudy}){
                                 src={item.iphonePotom}
                                 alt="Disoa marketing - budejeme Vaše sociální sítě aby je viděli ti správní lidé"
                                 width={350}
-                                height={600}
-                                className="object-cover max-h-[31.5rem] rounded-2xl object-top"
+                                height={700}
+                                className="object-cover max-h-[33rem] rounded-2xl object-top"
                               />
                               </div>
                   
@@ -183,7 +184,7 @@ export default function SlugComp({item}: {item:CaseStudy}){
                                 src={item.iphonePred}
                                 alt="Disoa marketing - budejeme Vaše sociální sítě aby je viděli ti správní lidé"
                                 width={350}
-                                height={600}
+                                height={700}
                                 className="object-cover max-h-[25rem] rounded-2xl object-top"
                                 onClick={() => setNdImg(!ndImg)}
                               />
@@ -194,7 +195,7 @@ export default function SlugComp({item}: {item:CaseStudy}){
                                 src={item.iphonePotom}
                                 alt="Disoa marketing - budejeme Vaše sociální sítě aby je viděli ti správní lidé"
                                 width={350}
-                                height={600}
+                                height={700}
                                 className="object-cover max-h-[25rem] rounded-2xl object-top"
                                 onClick={() => setNdImg(!ndImg)}
                               />

@@ -13,7 +13,7 @@ return{
  icons: {
     icon: "/logos/star.png",
   },
-  applicationName: "Disoa Marketing",
+  applicationName: "Disoa",
   generator: "Next.js",
   authors: [
     { name: "Jakub Doležal" },

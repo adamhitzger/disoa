@@ -12,7 +12,7 @@ import Link from "next/link";
 
 export default function BrandLogos({data}: {data: Array<BrandLogo>}){
     return(
-        <aside className="flex size-full pb-4 pt-12  items-center justify-center">
+        <aside className="flex size-full pb-4 pt-12  items-center bg-cp-lightwhite justify-center">
     <Marquee>
       <MarqueeFade side="left" />
       <MarqueeFade side="right" />

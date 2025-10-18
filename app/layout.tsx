@@ -17,7 +17,7 @@ const roboto = Roboto_Mono({
 
 
 export const metadata: Metadata = {
-  title: "Disoa Marketing",
+  title: "Disoa",
   description:
     "Disoa Marketing – profesionální správa sociálních sítí, Meta Ads kampaní a produkce obsahu. Pomůžeme vaší značce růst a oslovit ty správné lidi v pravý čas.",
   icons: {

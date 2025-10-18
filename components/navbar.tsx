@@ -35,14 +35,14 @@ useEffect(() => {
  
       <nav
         className={cn(
-          "flex max-w-full mx-10  text-foreground fixed top-10 inset-x-0 flex-row justify-between  rounded-[1.2rem]  bg-cp-lightwhite z-[5000] p-2  items-center  ",
+          "flex max-w-full mx-10  text-foreground fixed top-10 inset-x-0 flex-row justify-between  rounded-[1.2rem]  bg-cp-lightwhite z-[5000] p-3  items-center  ",
           className
         )}
       >
        <Link
             href={"/"}
             className={cn(
-              "relative items-center flex space-x-1"
+              "relative items-center ml-4 flex space-x-1"
             )}
           >
            <Image ref={imgRef} src={"/logos/star.svg"} alt="Logo Disoa Marketing" width={34} height={34}/>
@@ -55,7 +55,7 @@ useEffect(() => {
               "relative items-center flex space-x-1"
             )}
           >
-            <span className="hidden md:block text-xl">Služby</span>
+            <span className="hidden md:block text-xl hover:text-[1.5rem] transition-all duration-200">Služby</span>
           </Link>
            <Link
             href={"/#statistiky"}
@@ -63,7 +63,7 @@ useEffect(() => {
               "relative items-center flex space-x-1"
             )}
           >
-            <span className="hidden md:block text-xl">Naše výsledky</span>
+            <span className="hidden md:block text-xl hover:text-[1.5rem] transition-all duration-200">Naše výsledky</span>
           </Link>
            <Link
             href={"/#klienti"}
@@ -71,12 +71,12 @@ useEffect(() => {
               "relative items-center flex space-x-1"
             )}
           >
-            <span className="hidden md:block text-xl">Klienti</span>
+            <span className="hidden md:block text-xl hover:text-[1.5rem] transition-all duration-200">Klienti</span>
           </Link>
           </div>
           <Link className={cn(
               "relative items-center hidden md:flex space-x-1"
-            )} href={"/#form"}>
+            )} href={"/#kontakt"}>
         <Button size={"sm"}>ZAČÍT s námi</Button>
         </Link>
         <Sheet open={open} onOpenChange={setOpen}>
@@ -115,7 +115,7 @@ useEffect(() => {
           </Link>
           <Link className={cn(
               "relative items-center  space-x-1"
-            )} href={"/#form"}>
+            )} href={"/#kontakt"}>
         <Button onClick={() => setOpen(false)}>ZAČÍT s námi</Button>
         </Link>
             </SheetContent>
