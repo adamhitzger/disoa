@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { HeaderProps } from "@/types";
-import React, { useRef } from "react";
+import React from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import gsap from "gsap";
