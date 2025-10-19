@@ -1,18 +1,72 @@
 import type { Metadata } from "next";
-import { Hanken_Grotesk, Roboto_Mono} from "next/font/google";
+import localFont from "next/font/local"
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Toaster } from "react-hot-toast";
 
-const gothic = Hanken_Grotesk({
-  variable: "--font-gothic",
-  subsets: ["latin"]
+const novatica = localFont({
+   variable: "--font-novatica",
+  display: "swap",
+  src: [
+    {
+      path: "../public/fonts/novatica/light.woff2",
+      weight: "300",
+      style: "normal"
+    },
+    {
+      path: "../public/fonts/novatica/regular.woff2",
+      weight: "400",
+      style: "normal"
+    },
+    {
+      path: "../public/fonts/novatica/medium.woff2",
+      weight: "500",
+      style: "normal"
+    },
+    {
+      path: "../public/fonts/novatica/semibold.woff2",
+      weight: "600",
+      style: "normal"
+    },
+    {
+      path: "../public/fonts/novatica/bold.woff2",
+      weight: "700",
+      style: "normal"
+    },
+  ]
 })
 
-const roboto = Roboto_Mono({
-  variable: "--font-roboto",
-  subsets: ["latin"],
+const hk_gothic = localFont({
+  variable: "--font-gothic",
+  display: "swap",
+  src: [
+    {
+      path: "../public/fonts/hk-gothic/light.woff2",
+      weight: "300",
+      style: "normal"
+    },
+    {
+      path: "../public/fonts/hk-gothic/regular.woff2",
+      weight: "400",
+      style: "normal"
+    },
+    {
+      path: "../public/fonts/hk-gothic/medium.woff2",
+      weight: "500",
+      style: "normal"
+    },
+    {
+      path: "../public/fonts/hk-gothic/semibold.woff2",
+      weight: "600",
+      style: "normal"
+    },
+    {
+      path: "../public/fonts/hk-gothic/bold.woff2",
+      weight: "700",
+      style: "normal"
+    },
+  ]
 })
 
 
@@ -66,7 +120,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`overflow-x-hidden ${gothic.variable} ${roboto.variable} antialiased `}
+        className={`overflow-x-hidden ${novatica.variable}  ${hk_gothic.variable} antialiased `}
       >
         <Navbar/>
         {children}

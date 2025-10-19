@@ -4,6 +4,7 @@ import Image from "next/image"
 
 export default function Footer(){
     return(
+      <>
         <footer className="w-full flex flex-col sm:flex-row py-8 px-32 bg-cp-brown gap-5">
             <div className="w-full sm:w-1/2 flex justify-center  py-16 flex-col space-y-4" >
                 <div className="flex flex-row space-x-4">
@@ -13,7 +14,7 @@ export default function Footer(){
               "relative items-center flex space-x-5"
             }
           >
-           <Image src={"/logos/star.svg"} alt="Logo Disoa Marketing" width={64} height={64}/>
+          <Image src={"/logos/star.svg"} alt="Logo Disoa Marketing" width={64} height={64}/>
           <Image className="invert" src={"/logos/disoa_name.png"} alt="Logo Disoa Marketing" width={170} height={54}/>
           </Link>
           
@@ -34,5 +35,9 @@ export default function Footer(){
                 <Link className="font-light my-5" href={"/zasady-zpracovani-udaju"} >Zásady zpracování osobních údajů</Link>
              </div>
         </footer>
+        <section className="flex flex-row text-cp-lightwhite bg-cp-brown font-light justify-center p-2 text-base">
+            <span>Developed by <Link href={"https://adamhitzger.com"} className="text-cp-orange font-medium hover:text-lg transition-all duration-300">Adam Hitzger</Link></span>
+        </section>
+        </>
     )
 }

@@ -41,7 +41,7 @@ export default function Header({st_header, nd_header, text, button, logo, bg_img
       />
         </Link>}
            <div className="rounded-bl-[6em] rounded-br-[6em] w-fit  flex flex-col space-y-6 p-3 m-auto">
-            {st_header && <h1 className={`normal-case ${nd_header ?"text-5xl sm:text-6xl xl:text-7xl" : "text-6xl sm:text-8xl xl:text-[9rem]"} `}>{st_header}</h1>}
+            {st_header && <h1 className={`normal-case ${nd_header ?"text-5xl sm:text-6xl font-gothic xl:text-7xl" : "text-6xl sm:text-8xl xl:text-[9rem]"} `}>{st_header}</h1>}
             {nd_header && <h2 className="normal-case text-5xl sm:text-6xl xl:text-7xl">{nd_header}</h2>}
             <p className="text-xl font-light">
                {text && text.map((line, i) => (
