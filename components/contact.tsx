@@ -36,11 +36,7 @@ export default function Contact(){
             <div className=" flex flex-col space-y-4 w-full md:w-1/2">
                 <h1 className="text-6xl uppercase font-light ">Začněte dnes!</h1>
                 <p className="text-xl max-w-[35rem] font-light">
-                  Chcete své podnikání rozjet a posunout na další úroveň? 
-                  Napište nám pár řádků a společně promyšlenou strategii 
-                  pro sociální sítě - od tvorby přes reklamy až po každodenní 
-                  správu. Postaráme se o to, aby Vaše značka byla vidět a 
-                  přitahovala nové zákazníky.  
+                 Chcete své podnikání rozjet a posunout na další úroveň? Napište nám pár řádků a společně připravíme promyšlenou strategii pro sociální sítě – od tvorby obsahu přes reklamy až po každodenní správu. Postaráme se o to, aby vaše značka byla vidět a přitahovala nové zákazníky.
                 </p>
             </div>
 

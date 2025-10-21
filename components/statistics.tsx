@@ -49,7 +49,7 @@ export default function StatisticsMain(){
                 <Counter text="zkušeností se sociálními sítěmi" to={5} endText="let" className="bg-cp-brown"  textColor="text-background"/>
                 <Counter text="úspěšně realizovaných projektů" to={25} endText="+" className="bg-cp-orange"  textColor="text-background"/>
                 <Counter text="každá strategie přesně podle vašich cílů" to={100} endText="%" anotherText=" na míru" className="bg-cp-orange sm:col-span-2"  textColor="text-background"/>
-                <Counter text="klientů s námi zůstanu i po zkušební době" to={98} endText="%" className="bg-cp-white"  textColor="text-background"/>
+                <Counter text="klientů s námi zůstane i po zkušební době" to={98} endText="%" className="bg-cp-white"  textColor="text-background"/>
 
                 </div>
             </div>

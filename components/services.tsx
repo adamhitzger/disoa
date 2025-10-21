@@ -22,10 +22,10 @@ export default function Services(){
                         <Button className="w-full flex flex-row justify-end"><ArrowDownRight className="size-16" strokeWidth={1}/></Button>
                         </Link>
                     </article>
-                    <article className="min-w-[16rem] hover:scale-105 duration-200 transition-all p-6 w-full rounded-[2em] bg-cp-lightwhite flex flex-col gap-10 justify-between">
+                    <article className="min-w-[16rem] hover:scale-105 duration-200 transition-all p-6 w-full rounded-[2em] bg-cp-lightwhite flex flex-col gap-10 justify-between items-center">
                         <Image src={"/logos/star.svg"} alt="Logo Disoa marketing" className="mx-auto mt-5" width={84} height={84}/>
-                        <h3 className="text-4xl text-center mb-11">PRODUKCE</h3>
-                        <Link href={"/produkce"}>
+                        <h3 className="text-4xl  mb-11">PRODUKCE</h3>
+                        <Link href={"/produkce"} className="w-full">
                         <Button className="w-full flex flex-row justify-end"><ArrowDownRight className="size-16" strokeWidth={1}/></Button>
                         </Link>
                     </article>

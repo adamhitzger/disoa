@@ -64,7 +64,7 @@ export default function SlugComp({item}: {item:CaseStudy}){
         </svg>
         <span className="text-[2.4rem]  font-gothic font-light [word-spacing:0.2px] md:text-nowrap">Cíle</span>
                 </div>
-                <p className={`font-gothic leading-5.5 text-xl font-extralight `}>
+                <p className={`font-gothic ${item.finishes.length === 2 && "mb-5"} text-xl leading-5.5 font-extralight `}>
                   {item.finishes && item.finishes.map((line, i) => (
                           <React.Fragment key={i}>
                             {line}
@@ -116,8 +116,8 @@ export default function SlugComp({item}: {item:CaseStudy}){
         </svg>
         <span className="text-[2.4rem]  font-gothic font-light [word-spacing:0.2px] md:text-nowrap">Výsledky</span>
                 </div>
-                <p className={`font-gothic leading-5.5 text-xl font-extralight `}>
-                   {item.results && item.results.map((line, i) => (
+                <p className={`font-gothic ${item.results.length === 2 && "mb-5"} text-xl leading-5.5 font-extralight `}>
+                  {item.results && item.results.map((line, i) => (
                           <React.Fragment key={i}>
                             {line}
                             <br />

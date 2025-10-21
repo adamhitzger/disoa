@@ -18,9 +18,10 @@ export default async function SocialNetPage(){
             text={[
                 "Budujte silnou značku tam, kde tráví lidé nejvíc času. Vytvoříme",
                 "pro Vás obsah, který zaujme, vyvolá emoce a promění sledující ve",
-                "věrné zákazníky. Sociální sítě nejsou jen o příspěvcích - jsou to",
-                "nejrychlejší cesta k budování důvěry, vztahů a prodejů."
+                "věrné zákazníky. Sociální sítě nejsou jen o příspěvcích - jsou",
+                "nejrychlejší cestou k budování důvěry, vztahů a prodejů."
             ]}
+            isWhite={false}
         />
         <Statistics items={socialStatistics} pColor="text-foreground"/>
         <StudiesCarousel items={caseStudies}/>

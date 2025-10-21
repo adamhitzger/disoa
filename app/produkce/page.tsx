@@ -7,7 +7,7 @@ export default function Produkce(){
             st_header="PRODUKCE"
             text={[ 
               "Z důvodů naplnění kapacity nabízíme nyní tuto službu",
-              " pouze našim dlouhodobým klientům",
+              " pouze našim dlouhodobým klientům.",
             ]}
             button={false}/>
             <div className="w-full h-10"/>

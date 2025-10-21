@@ -7,8 +7,9 @@ export default function MetaAds(){
             st_header="META ADS"
             text={[ 
               "Z důvodů naplnění kapacity nabízíme nyní tuto službu",
-              " pouze našim dlouhodobým klientům",
+              " pouze našim dlouhodobým klientům.",
             ]}
+            isWhite={false}
             button={false}/>
             <div className="w-full h-10"/>
             </>

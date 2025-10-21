@@ -5,7 +5,7 @@ export const socialStatistics = [
         endText:"+",
     },
     {
-        text: "vydaných reel měsíčně na profily našich klientů",
+        text: "vydaných reel měsíčně na profilech našich klientů",
         to: 100,
         endText:"+",
     },
